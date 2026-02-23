@@ -42,7 +42,7 @@ const ScheduleFilterController = () => {
       className="fixed z-30 flex w-full bg-[#FFFFFFD9] pb-3 pl-[var(--client-layout-margin)] backdrop-blur-[5px]"
       ref={ref}
     >
-      <div className="scrollbar-hide flex flex-row items-center justify-start gap-2 overflow-x-auto text-xl">
+      <div className="flex flex-row items-center justify-start gap-2 overflow-x-auto text-xl scrollbar-hide">
         <CommonPillButton
           className={`!size-fit shrink-0 px-4 transition-colors ${
             contentsfilter?.includes(ContentsFilterType.SOLO)
