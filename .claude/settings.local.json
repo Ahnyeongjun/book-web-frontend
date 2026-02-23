@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd:*)",
+      "Bash(cd \"C:/side/종료/BOOK_FE-main\" && git remote -v && git fetch origin --verbose 2>&1)"
+    ]
+  }
+}

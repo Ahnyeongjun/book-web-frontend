@@ -1,0 +1,8 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="xMidYMid meet">
+    <path
+        d="M16 17C14.3431 17 13 18.3431 13 20V30C13 32.7614 15.2386 35 18 35H30C32.7614 35 35 32.7614 35 30V20C35 18.3431 33.6569 17 32 17"
+        stroke="currentColor" stroke-width="1.6" />
+    <path d="M29 18.5L24 13M24 13L19 18.5M24 13V27" stroke="currentColor" stroke-width="1.6"
+        stroke-linecap="round" stroke-linejoin="round" />
+</svg>
