@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="450" viewBox="0 0 300 450">
+  <rect width="300" height="450" fill="#4A7C59"/>
+  <rect x="20" y="20" width="260" height="410" rx="4" fill="#5D9B6E" stroke="#3A6248" stroke-width="1"/>
+  <text x="150" y="190" text-anchor="middle" font-family="serif" font-size="30" font-weight="bold" fill="#FFFFFF">채식주의자</text>
+  <line x1="80" y1="220" x2="220" y2="220" stroke="#A8D5B8" stroke-width="1"/>
+  <text x="150" y="260" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#D4EAD9">한강</text>
+  <text x="150" y="380" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#A8D5B8">창비</text>
+</svg>

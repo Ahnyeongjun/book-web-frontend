@@ -6,8 +6,7 @@ export const MOCK_RECOMMENDS: RecommendedBookDto[] = [
     title: "헬로 뷰티풀",
     summary:
       "김영하의 신작 소설로, 인간의 아름다움과 불완전함을 탐구하는 이야기입니다.",
-    titleImage:
-      "https://i.ytimg.com/vi/Al8jzVsjM3k/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDrJW7cnpOuhGG1i6nhQsv61JFXFg",
+    titleImage: "/images/mock/book1.svg",
     publishedDate: "2025-03-01",
     authorList: [{ name: "김영하", id: 2, bookList: [] }],
     publisher: {
@@ -25,8 +24,7 @@ export const MOCK_RECOMMENDS: RecommendedBookDto[] = [
     title: "백합의 지옥",
     summary:
       "최재원의 신작으로, 인간의 내면과 사회의 어두운 면을 조명하는 소설입니다.",
-    titleImage:
-      "https://i0.wp.com/whenmal.club/wp-content/uploads/2025/01/Wide-Cover.jpeg?resize=1024%2C576&ssl=1",
+    titleImage: "/images/mock/book2.svg",
     publishedDate: "2025-03-01",
     authorList: [{ name: "김영하", id: 2, bookList: [] }],
     publisher: {
@@ -43,8 +41,7 @@ export const MOCK_RECOMMENDS: RecommendedBookDto[] = [
     isbn: "9791191114560",
     title: "우리가 처음 사피엔스였을 때",
     summary: "김상태의 신작으로, 인류의 기원과 진화를 탐구하는 책입니다.",
-    titleImage:
-      "https://image.yes24.com/images/chyes24/article/froala/image/2025/02/20250212-8a85ffc8.jpg",
+    titleImage: "/images/mock/book3.svg",
     publishedDate: "2025-03-01",
     authorList: [{ name: "김영하", id: 2, bookList: [] }],
     publisher: {
@@ -61,8 +58,7 @@ export const MOCK_RECOMMENDS: RecommendedBookDto[] = [
     isbn: "9788937480045",
     title: "데미안",
     summary: "헤르만 헤세의 대표작으로, 자아 발견과 성장에 관한 이야기입니다.",
-    titleImage:
-      "https://minumsa.minumsa.com/wp-content/blogs.dir/2/files/bookclub-shop/%EB%8C%80%EC%A7%80-105-1-500x500.png",
+    titleImage: "/images/mock/book4.svg",
     publishedDate: "2025-03-01",
     authorList: [{ name: "헤르만헤세", id: 5, bookList: [] }],
     publisher: {

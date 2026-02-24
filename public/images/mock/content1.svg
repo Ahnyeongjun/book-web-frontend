@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+  <rect width="480" height="360" fill="#1a1a2e"/>
+  <polygon points="190,120 250,180 190,180" fill="#e94560"/>
+  <circle cx="220" cy="150" r="50" fill="none" stroke="#e94560" stroke-width="3"/>
+  <text x="240" y="260" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF">불편한 편의점 리뷰</text>
+  <text x="240" y="290" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#888">YouTube</text>
+</svg>

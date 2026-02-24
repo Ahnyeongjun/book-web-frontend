@@ -34,6 +34,7 @@ const nextConfig: NextConfig = {
       : "http://localhost:3000",
   },
   images: {
+    dangerouslyAllowSVG: true,
     remotePatterns: [
       {
         protocol: "https",

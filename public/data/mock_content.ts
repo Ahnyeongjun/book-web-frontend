@@ -8,24 +8,21 @@ export const MOCK_CONTENTS: ContentsDto[] = [
       { url: "https://www.youtube.com/watch?v=Al8jzVsjM3k", type: "Youtube" },
     ],
     creator: { name: "김영하", id: 2 },
-    image:
-      "https://i.ytimg.com/vi/Al8jzVsjM3k/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDrJW7cnpOuhGG1i6nhQsv61JFXFg",
+    image: "/images/mock/content1.svg",
   },
   {
     id: 2,
     title: "백합의 지옥",
     urls: [{ url: "https://whenmal.club/ep65/", type: "Youtube" }],
     creator: { name: "최재원", id: 4 },
-    image:
-      "https://i0.wp.com/whenmal.club/wp-content/uploads/2025/01/Wide-Cover.jpeg?resize=1024%2C576&ssl=1",
+    image: "/images/mock/content1.svg",
   },
   {
     id: 3,
     title: "우리가 처음 사피엔스였을 때",
     urls: [{ url: "https://ch.yes24.com/Article/Details/80818", type: "Link" }],
     creator: { name: "김상태", id: 3 },
-    image:
-      "https://image.yes24.com/images/chyes24/article/froala/image/2025/02/20250212-8a85ffc8.jpg",
+    image: "/images/mock/content1.svg",
   },
   {
     id: 4,
@@ -34,8 +31,7 @@ export const MOCK_CONTENTS: ContentsDto[] = [
       { url: "https://minumsa.minumsa.com/bookclub_shop/30623/", type: "Link" },
     ],
     creator: { name: "헤르만헤세", id: 5 },
-    image:
-      "https://minumsa.minumsa.com/wp-content/blogs.dir/2/files/bookclub-shop/%EB%8C%80%EC%A7%80-105-1-500x500.png",
+    image: "/images/mock/content1.svg",
   },
   {
     id: 5,
