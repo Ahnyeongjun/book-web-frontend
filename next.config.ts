@@ -8,6 +8,26 @@ const withSerwist = withSerwistInit({
 });
 
 const nextConfig: NextConfig = {
+  async rewrites() {
+    const backendUrl = process.env.BACKEND_URL || "http://localhost:8080";
+    const adminUrl = process.env.BACKEND_ADMIN_URL || "http://localhost:8081";
+    const kakaoUrl = process.env.KAKAO_SEARCH_API_URL || "https://dapi.kakao.com/v3/search";
+
+    return [
+      {
+        source: "/proxy/:path*",
+        destination: `${backendUrl}/:path*`,
+      },
+      {
+        source: "/proxy-admin/:path*",
+        destination: `${adminUrl}/:path*`,
+      },
+      {
+        source: "/proxy-kakao/:path*",
+        destination: `${kakaoUrl}/:path*`,
+      },
+    ];
+  },
   publicRuntimeConfig: {
     VERCEL_PROJECT_PRODUCTION_URL: process.env.VERCEL_PROJECT_PRODUCTION_URL
       ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
