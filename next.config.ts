@@ -75,7 +75,20 @@ const nextConfig: NextConfig = {
       "minumsa.minumsa.com",
     ],
   },
-  webpack: (config) => {
+  webpack: (config, { isServer }) => {
+    // MSW를 서버 번들에서 제외 (Node.js 런타임에서 직접 로드)
+    if (isServer) {
+      config.externals = [
+        ...(Array.isArray(config.externals) ? config.externals : config.externals ? [config.externals] : []),
+        "msw",
+        "msw/node",
+        "@mswjs/interceptors",
+        "@mswjs/interceptors/ClientRequest",
+        "@mswjs/interceptors/XMLHttpRequest",
+        "@mswjs/interceptors/fetch",
+      ];
+    }
+
     // SVG 파일에 대한 규칙 추가
     config.module.rules.push({
       test: /\.svg$/,
