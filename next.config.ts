@@ -8,7 +8,6 @@ const withSerwist = withSerwistInit({
 });
 
 const nextConfig: NextConfig = {
-  serverExternalPackages: ["msw", "@mswjs/interceptors"],
   async rewrites() {
     const backendUrl = process.env.BACKEND_URL || "http://localhost:8080";
     const adminUrl = process.env.BACKEND_ADMIN_URL || "http://localhost:8081";
@@ -75,20 +74,7 @@ const nextConfig: NextConfig = {
       "minumsa.minumsa.com",
     ],
   },
-  webpack: (config, { isServer }) => {
-    // MSW를 서버 번들에서 제외 (Node.js 런타임에서 직접 로드)
-    if (isServer) {
-      config.externals = [
-        ...(Array.isArray(config.externals) ? config.externals : config.externals ? [config.externals] : []),
-        "msw",
-        "msw/node",
-        "@mswjs/interceptors",
-        "@mswjs/interceptors/ClientRequest",
-        "@mswjs/interceptors/XMLHttpRequest",
-        "@mswjs/interceptors/fetch",
-      ];
-    }
-
+  webpack: (config) => {
     // SVG 파일에 대한 규칙 추가
     config.module.rules.push({
       test: /\.svg$/,
