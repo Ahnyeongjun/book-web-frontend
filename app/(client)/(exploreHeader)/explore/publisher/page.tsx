@@ -4,6 +4,8 @@ import PublisherGridItem from "./components/PublisherGridItem";
 import PublisherPageDataProvider from "./components/PublisherPageDataProvider";
 import PublisherFilterController from "./components/publisherFilterController/PublisherFilterController";
 
+export const dynamic = "force-dynamic";
+
 const PublisherPage = async () => {
   const initialData = await getPublishers();
   console.log(initialData, '출판사');

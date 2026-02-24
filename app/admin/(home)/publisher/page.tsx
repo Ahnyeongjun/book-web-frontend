@@ -7,6 +7,8 @@ import { FormattedPublisher } from "@/types/format";
 import { redirect } from "next/navigation";
 import AdminRowControllerContainer from "../components/adminRowControllerContainer/AdminRowControllerContainer";
 
+export const dynamic = "force-dynamic";
+
 const Publisher = async ({
   searchParams,
 }: {

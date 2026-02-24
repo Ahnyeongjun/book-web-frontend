@@ -7,6 +7,8 @@ import AdminPaginationController from "../components/adminPaginationController/A
 import AdminRowControllerContainer from "../components/adminRowControllerContainer/AdminRowControllerContainer";
 import AdminRowList from "../components/adminRowList/AdminRowList";
 
+export const dynamic = "force-dynamic";
+
 const Content = async ({
   searchParams,
 }: {
