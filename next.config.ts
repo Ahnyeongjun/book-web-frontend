@@ -8,6 +8,7 @@ const withSerwist = withSerwistInit({
 });
 
 const nextConfig: NextConfig = {
+  serverExternalPackages: ["msw", "@mswjs/interceptors"],
   async rewrites() {
     const backendUrl = process.env.BACKEND_URL || "http://localhost:8080";
     const adminUrl = process.env.BACKEND_ADMIN_URL || "http://localhost:8081";
