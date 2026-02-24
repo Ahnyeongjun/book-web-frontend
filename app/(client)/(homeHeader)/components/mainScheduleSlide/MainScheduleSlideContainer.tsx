@@ -28,7 +28,7 @@ const MainScheduleSlideContainer = ({
         }
       />
       <div
-        className="scrollbar-hide relative flex size-full snap-x snap-mandatory flex-row gap-2 overflow-x-scroll pr-[var(--client-layout-margin)]"
+        className="relative flex size-full snap-x snap-mandatory flex-row gap-2 overflow-x-scroll pr-[var(--client-layout-margin)] scrollbar-hide"
         ref={SliderRef}
       >
         {scheduleItems.map((item, index) => (
