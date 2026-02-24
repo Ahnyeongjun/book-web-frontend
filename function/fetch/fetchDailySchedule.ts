@@ -19,6 +19,10 @@ const fetchDailySchedule = async () => {
     }
   } catch (error) {
     console.error("Error fetching data:", error);
+    if (process.env.NEXT_PUBLIC_API_MOCKING === "enabled") {
+      const { mockEvents } = await import("@/mocks/data");
+      return mockEvents;
+    }
     return [];
   }
 };

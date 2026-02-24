@@ -26,6 +26,10 @@ const fetchBirthdayBooks = async (): Promise<
     }
   } catch (error) {
     console.error("Error fetching data:", error);
+    if (process.env.NEXT_PUBLIC_API_MOCKING === "enabled") {
+      const { mockPageResponseBookDto } = await import("@/mocks/data");
+      return mockPageResponseBookDto;
+    }
   }
 };
 

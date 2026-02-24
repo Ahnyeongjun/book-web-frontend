@@ -20,6 +20,10 @@ const fetchTodayLibrary = async (): Promise<
     }
   } catch (error) {
     console.error("Error fetching data:", error);
+    if (process.env.NEXT_PUBLIC_API_MOCKING === "enabled") {
+      const { mockListResponseRecommendedBookDto } = await import("@/mocks/data");
+      return mockListResponseRecommendedBookDto;
+    }
     return { items: [], length: 0 };
   }
 };
