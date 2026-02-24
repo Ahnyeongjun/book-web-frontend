@@ -235,8 +235,43 @@ export const mockContents: ContentsDto[] = [
     id: 2,
     urls: [{ url: "https://blog.example.com/review", type: "Blog" }],
     title: "채식주의자 서평",
-    image: "/images/mock/content1.svg",
+    image: "/images/mock/content2.svg",
     creator: { id: 1, name: "관리자" },
+  },
+  {
+    id: 3,
+    urls: [{ url: "https://example.com/podcast/demian", type: "Link" }],
+    title: "데미안, 자아를 찾아가는 여정",
+    image: "/images/mock/content3.svg",
+    creator: { id: 2, name: "김영하" },
+  },
+  {
+    id: 4,
+    urls: [{ url: "https://youtube.com/watch?v=def", type: "Youtube" }],
+    title: "아몬드 - 감정을 느끼지 못하는 소년",
+    image: "/images/mock/content1.svg",
+    creator: { id: 3, name: "최재원" },
+  },
+  {
+    id: 5,
+    urls: [{ url: "https://blog.example.com/boy-comes", type: "Blog" }],
+    title: "소년이 온다 깊이 읽기",
+    image: "/images/mock/content2.svg",
+    creator: { id: 1, name: "관리자" },
+  },
+  {
+    id: 6,
+    urls: [{ url: "https://example.com/article/reading", type: "Link" }],
+    title: "올해 꼭 읽어야 할 한국 소설 5선",
+    image: "/images/mock/content3.svg",
+    creator: { id: 2, name: "김영하" },
+  },
+  {
+    id: 7,
+    urls: [{ url: "https://youtube.com/watch?v=ghi", type: "Youtube" }],
+    title: "작가 한강의 문학 세계",
+    image: "/images/mock/content1.svg",
+    creator: { id: 3, name: "최재원" },
   },
 ];
 
@@ -253,7 +288,7 @@ export const mockContentsChanged: ContentsDtoChanged[] = mockContents.map((c) =>
 
 export const mockPageResponseContentsDto: PageResponseContentsDto = {
   items: mockContentsChanged,
-  totalCount: 2,
+  totalCount: mockContentsChanged.length,
   totalPages: 1,
   hasNext: false,
   hasPrevious: false,
