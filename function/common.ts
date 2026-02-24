@@ -1,4 +1,5 @@
 import { KaKaoBookResponse } from "@/types/api";
+import { KAKAO_API_URL, KAKAO_API_KEY } from "./config";
 
 export const formatDateToKorean = (date: Date) => {
   const year = date.getFullYear();
@@ -17,10 +18,10 @@ export const handleFetchKaKaoData = async (
   target: "title" | "isbn" | "publisher" | "person"
 ) => {
   if (!query) return;
-  const response = await fetch(`${process.env.NEXT_PUBLIC_KAKAO_SEARCH_API_URL}/book?target=${target}&query=${query}`, {
+  const response = await fetch(`${KAKAO_API_URL}/book?target=${target}&query=${query}`, {
     method: "GET",
     headers: {
-      Authorization: `KakaoAK ${process.env.NEXT_PUBLIC_KAKAO_SEARCH_API_KEY}`,
+      Authorization: `KakaoAK ${KAKAO_API_KEY}`,
     },
     cache: "force-cache", //정적인 정보라 카카오가 수정하지 않을것임을 감안하고 캐싱
     next: { revalidate: 86400, tags: [query, target] },

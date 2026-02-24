@@ -1,4 +1,5 @@
 import { ListResponseRecommendedBookDto } from "@/types/dto";
+import { BACKEND_URL } from "../config";
 import fetchWithTimeout from "./fetchWithTimeout";
 
 const fetchTodayLibrary = async (): Promise<
@@ -6,7 +7,7 @@ const fetchTodayLibrary = async (): Promise<
 > => {
   try {
     const response = await fetchWithTimeout(
-      process.env.NEXT_PUBLIC_BACKEND_URL + "/books/recommended",
+      BACKEND_URL + "/books/recommended",
       {
         next: { revalidate: 86400, tags: ["today-library"] },
       }

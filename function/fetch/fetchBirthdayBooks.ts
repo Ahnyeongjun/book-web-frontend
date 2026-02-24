@@ -1,11 +1,12 @@
 import { PageResponseBookDto } from "@/types/dto";
+import { BACKEND_URL } from "../config";
 
 const fetchBirthdayBooks = async (): Promise<
   PageResponseBookDto | undefined
 > => {
   try {
     const response = await fetch(
-      process.env.NEXT_PUBLIC_BACKEND_URL +
+      BACKEND_URL +
         "/books?keyword=string&page=0&limit=10&orderBy=publishedDate&direction=desc",
       {
         next: { revalidate: 86400, tags: ["daily-discovery"] },

@@ -1,20 +1,18 @@
 import { LoginProps, LoginResType } from "@/types/admin";
+import { BACKEND_URL, ADMIN_URL } from "../config";
 
 export const postRequest = async <T>(
   endpoint: string,
   bodyData: T
 ): Promise<unknown> => {
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}${endpoint}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(bodyData),
-      }
-    );
+    const response = await fetch(`${BACKEND_URL}${endpoint}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(bodyData),
+    });
 
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
@@ -35,16 +33,13 @@ export const adminPostRequest = async <T>(
   bodyData: T
 ): Promise<unknown> => {
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_ADMIN_URL}${endpoint}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(bodyData),
-      }
-    );
+    const response = await fetch(`${ADMIN_URL}${endpoint}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(bodyData),
+    });
 
     if (!response.ok) {
       throw new Error(`Failed to POST to ${endpoint}`);
@@ -61,16 +56,13 @@ export const postLogin = async (
   bodyData: LoginProps
 ): Promise<LoginResType> => {
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/login`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(bodyData),
-      }
-    );
+    const response = await fetch(`${BACKEND_URL}/auth/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(bodyData),
+    });
 
     if (!response.ok) {
       throw new Error(`Failed to POST to login`);

@@ -1,11 +1,12 @@
 import { PageResponseEventDto } from "@/types/dto";
+import { BACKEND_URL } from "../config";
 import fetchWithTimeout from "./fetchWithTimeout";
 
 //캐싱 정책에따른 분리
 const fetchDailySchedule = async () => {
   try {
     const response = await fetchWithTimeout(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/events`,
+      `${BACKEND_URL}/events`,
       {
         next: { revalidate: 86400, tags: ["daily-schedule"] },
       }

@@ -1,5 +1,6 @@
 "use client";
 import { PageResponseBookDto } from "@/types/dto";
+import { BACKEND_URL } from "@/function/config";
 import { useInfiniteQuery } from "@tanstack/react-query";
 
 const useGetBirthDayBooks = () => {
@@ -18,7 +19,7 @@ export default useGetBirthDayBooks;
 
 const fetchBirthDayBooks = async ({ pageParam = 0 }) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_URL}/books?keyword=string&page=${pageParam}&limit=10&orderBy=publishedDate&direction=desc`
+    `${BACKEND_URL}/books?keyword=string&page=${pageParam}&limit=10&orderBy=publishedDate&direction=desc`
   );
   console.log(response, "response");
 

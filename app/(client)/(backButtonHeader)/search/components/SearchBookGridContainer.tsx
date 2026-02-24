@@ -1,6 +1,7 @@
 "use client";
 import BookGrid from "@/components/bookGrid/BookGrid";
 import LoadingSpinner from "@/components/common/LoadingSpinner";
+import { KAKAO_API_URL, KAKAO_API_KEY } from "@/function/config";
 import { KaKaoBookResponse } from "@/types/api";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useEffect, useRef } from "react";
@@ -57,11 +58,11 @@ export default SearchBookGridContainer;
 
 const fetchInfiniteKaKaoData = async (pageParam: number, query?: string) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_KAKAO_SEARCH_API_URL}/book?query=${query}&page=${pageParam}&size=6`,
+    `${KAKAO_API_URL}/book?query=${query}&page=${pageParam}&size=6`,
     {
       method: "GET",
       headers: {
-        Authorization: `KakaoAK ${process.env.NEXT_PUBLIC_KAKAO_SEARCH_API_KEY}`,
+        Authorization: `KakaoAK ${KAKAO_API_KEY}`,
       },
       cache: "no-cache",
     }

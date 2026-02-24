@@ -1,8 +1,8 @@
+import { BACKEND_URL, ADMIN_URL } from "../config";
+
 export const getRequest = async <T>(endpoint: string): Promise<T> => {
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}${endpoint}`
-    );
+    const response = await fetch(`${BACKEND_URL}${endpoint}`);
     if (!response.ok) throw new Error(`Failed to GET from ${endpoint}`);
     return (await response.json()) as T;
   } catch (error) {
@@ -13,9 +13,7 @@ export const getRequest = async <T>(endpoint: string): Promise<T> => {
 
 export const getRequestForAdmin = async <T>(endpoint: string): Promise<T> => {
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_ADMIN_URL}${endpoint}`
-    );
+    const response = await fetch(`${ADMIN_URL}${endpoint}`);
     if (!response.ok) throw new Error(`Failed to GET from ${endpoint}`);
     return (await response.json()) as T;
   } catch (error) {

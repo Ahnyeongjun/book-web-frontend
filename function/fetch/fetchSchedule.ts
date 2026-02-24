@@ -1,4 +1,5 @@
 import { PageResponseEventDto } from "@/types/dto";
+import { BACKEND_URL } from "../config";
 
 type Arguments = {
   limit: number;
@@ -31,7 +32,7 @@ const fetchSchedule = async ({
     if (endDate) queryParams.append("endDate", endDate);
 
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/events?${queryParams.toString()}`
+      `${BACKEND_URL}/events?${queryParams.toString()}`
     );
     if (response.ok) {
       const result: PageResponseEventDto = await response.json();

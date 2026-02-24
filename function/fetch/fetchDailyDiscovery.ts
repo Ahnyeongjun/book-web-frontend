@@ -1,10 +1,11 @@
 import { ContentsDto, ListResponseContentsDto } from "@/types/dto";
+import { BACKEND_URL } from "../config";
 import fetchWithTimeout from "./fetchWithTimeout";
 
 const fetchDailyDiscovery = async (): Promise<ContentsDto[]> => {
   try {
     const response = await fetchWithTimeout(
-      process.env.NEXT_PUBLIC_BACKEND_URL + "/contents/discovery",
+      BACKEND_URL + "/contents/discovery",
       {
         next: { revalidate: 86400, tags: ["daily-discovery"] },
       }
