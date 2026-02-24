@@ -3,7 +3,7 @@ import Discovery from "@/components/discovery/Discovery";
 import { Suspense } from "react";
 import MainBookSlide from "./components/mainBookSlide/MainBookSlide";
 import MainScheduleSlide from "./components/mainScheduleSlide/MainScheduleSlide";
-import TodayLibraryDemo from "./components/todayLibrary/TodayLibraryDemo";
+import TodayLibrary from "./components/todayLibrary/TodayLibrary";
 export const dynamic = "force-dynamic";
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
         <Discovery />
       </Suspense>
       <Suspense fallback={<LoadingSpinner className="w-full" />}>
-        <TodayLibraryDemo />
+        <TodayLibrary />
       </Suspense>
       <MainScheduleSlide />
     </main>
