@@ -10,8 +10,8 @@ import {
   useRef,
   useState,
 } from "react";
-import ReactConfetti from "react-confetti";
 import BookDescription from "./BookDescription";
+import InteractiveConfetti from "./InteractiveConfetti";
 import MainBookSlideContainer from "./MainBookSlideContainer";
 
 type Props = {
@@ -58,16 +58,11 @@ const MainBookSlide = ({ className, ...props }: Readonly<Props>) => {
       {...props}
       ref={sectionRef}
     >
-      <ReactConfetti
+      <InteractiveConfetti
         width={size.width}
         height={size.height}
         wind={confettiWind}
-        gravity={0.08}
-        friction={0.96}
-        numberOfPieces={size.width / 25}
-        drawShape={drawShape}
-        frameRate={60}
-        style={{ zIndex: 0, display: "absolute" }}
+        numberOfPieces={Math.floor(size.width / 25)}
       />
       <BookDescription
         createdAt={new Date()}
@@ -86,12 +81,3 @@ const MainBookSlide = ({ className, ...props }: Readonly<Props>) => {
 };
 
 export default MainBookSlide;
-
-const drawShape = (ctx: CanvasRenderingContext2D) => {
-  const path = new Path2D(
-    "M37 2L23 0C23.8 7.2 13.3333 12.3333 8 14C10.5 16.5 17.6 20.9 26 18.5C34.4 16.1 36.8333 6.5 37 2Z"
-  );
-  ctx.save();
-  ctx.fill(path);
-  ctx.restore();
-};
