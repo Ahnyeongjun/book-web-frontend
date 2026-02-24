@@ -7,7 +7,7 @@ const fetchDailyDiscovery = async (): Promise<ContentsDto[]> => {
     const response = await fetchWithTimeout(
       BACKEND_URL + "/contents/discovery",
       {
-        next: { revalidate: 86400, tags: ["daily-discovery"] },
+        cache: "no-store",
       }
     );
     if (response.ok) {

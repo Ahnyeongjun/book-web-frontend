@@ -9,7 +9,7 @@ const fetchTodayLibrary = async (): Promise<
     const response = await fetchWithTimeout(
       BACKEND_URL + "/books/recommended",
       {
-        next: { revalidate: 86400, tags: ["today-library"] },
+        cache: "no-store",
       }
     );
     if (response.ok) {

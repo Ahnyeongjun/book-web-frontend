@@ -9,7 +9,7 @@ const fetchBirthdayBooks = async (): Promise<
       BACKEND_URL +
         "/books?keyword=string&page=0&limit=10&orderBy=publishedDate&direction=desc",
       {
-        next: { revalidate: 86400, tags: ["daily-discovery"] },
+        cache: "no-store",
       }
     );
     if (response.ok) {

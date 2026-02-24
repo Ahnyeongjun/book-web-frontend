@@ -49,8 +49,8 @@ const Discovery = async ({ className, ...props }: Readonly<Props>) => {
                 <React.Fragment key={item.id}>
                   <DiscoveryItem
                     contentType={
-                      item.urls && index < item.urls.length
-                        ? ContentsType[item.urls[index].type] || "기타"
+                      item.urls?.[0]
+                        ? ContentsType[item.urls[0].type] || "기타"
                         : "기타"
                     }
                     title={item.title || ""}

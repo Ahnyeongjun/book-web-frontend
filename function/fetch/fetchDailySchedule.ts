@@ -8,7 +8,7 @@ const fetchDailySchedule = async () => {
     const response = await fetchWithTimeout(
       `${BACKEND_URL}/events`,
       {
-        next: { revalidate: 86400, tags: ["daily-schedule"] },
+        cache: "no-store",
       }
     );
     if (response.ok) {
